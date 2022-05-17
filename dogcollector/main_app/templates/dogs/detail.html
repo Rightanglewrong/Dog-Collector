@@ -1,0 +1,13 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1> Details</h1>
+
+<div class="card">
+    <div class="card-content">
+      <span class="card-title">{{dog.id}}:  {{ dog.name }}</span>
+      <p>Breed: {{ dog.breed }}</p>
+      <p>Description: {{ dog.description }}</p>
+      <p>Age: {{ dog.age }}</p>
+    </div>
+</div>
+{% endblock %}

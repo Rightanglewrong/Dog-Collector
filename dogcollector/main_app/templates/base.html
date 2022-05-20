@@ -19,8 +19,16 @@
         </ul>
         <ul class="right">
           <li><a href="{% url 'about' %}">About</a></li>
-          <li><a href="{% url 'dogs_create' %}">Add a Doggo</a></li>
-          <li><a href="{% url 'dogs_index' %}">All em Doggos</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'friends_create' %}">Add a Friend</a></li>
+            <li><a href="{% url 'friends_index' %}">View All Friends</a></li>
+            <li><a href="{% url 'dogs_create' %}">Add a Doggo</a></li>
+            <li><a href="{% url 'dogs_index' %}">All em Doggos</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>
+          {% else %}
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            <li><a href="{% url 'login' %}">Log In</a></li>
+          {% endif %}
         </ul>
       </div>
     </nav>

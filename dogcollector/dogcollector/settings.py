@@ -19,7 +19,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-django_heroku.settings(locals())
 
 # Application definition
 
@@ -119,3 +118,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/dogs/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+django_heroku.settings(locals())
